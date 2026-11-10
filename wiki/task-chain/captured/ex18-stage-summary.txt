@@ -1,0 +1,164 @@
+﻿builtAt=2026-11-09 21:49:08 platform=StandaloneWindows64 tasks=19 stages=20
+START_CTX=BuildCache,BuildCallbacks,BuildDependencyData,BuildInterfacesWrapper,BuildLog,BuildParameters,BundleBuildContent,BundleBuildParameters,BundleBuildResults,BundleWriteData,IBuildCache,IBuildContent,IBuildLogger,IBuildParameters,IBuildResults,IBundleBuildContent,IBundleBuildParameters,IBundleBuildResults,IBundleWriteData,IDependencyCallback,IDependencyData,IDeterministicIdentifiers,IEditorBuildCallbacks,IObjectDependencyData,IPackingCallback,IProgressTracker,IScriptsCallback,IWriteData,IWritingCallback,ObjectDependencyData,PrefabPackedIdentifiers,ProgressTracker
+AFTER_CUSTOM_CTX=BuildCache,BuildCallbacks,BuildDependencyData,BuildInterfacesWrapper,BuildLog,BuildParameters,BundleBuildContent,BundleBuildParameters,BundleBuildResults,BundleWriteData,IBuildCache,IBuildContent,IBuildLogger,IBuildParameters,IBuildResults,IBundleBuildContent,IBundleBuildParameters,IBundleBuildResults,IBundleWriteData,ICustomAssets,IDependencyCallback,IDependencyData,IDeterministicIdentifiers,IEditorBuildCallbacks,IObjectDependencyData,IPackingCallback,IProgressTracker,IScriptsCallback,IWriteData,IWritingCallback,ObjectDependencyData,PrefabPackedIdentifiers,ProgressTracker
+ADDED_CTX=ICustomAssets
+### start（BuildContext 初始化后）
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=0 scenes=0 assetObj=0/0 sceneReferenced=0 assetUsage=0 sample=[]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=False writeResults=0 writeMeta=0
+extras: 
+ctxCount: 32
+### after SwitchToBuildPlatform
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=0 scenes=0 assetObj=0/0 sceneReferenced=0 assetUsage=0 sample=[]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=False writeResults=0 writeMeta=0
+extras: 
+ctxCount: 32
+### after RebuildSpriteAtlasCache
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=0 scenes=0 assetObj=0/0 sceneReferenced=0 assetUsage=0 sample=[]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=False writeResults=0 writeMeta=0
+extras: 
+ctxCount: 32
+### after BuildPlayerScripts
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=0 scenes=0 assetObj=0/0 sceneReferenced=0 assetUsage=0 sample=[]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 32
+### after PostScriptsCallback
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=0 scenes=0 assetObj=0/0 sceneReferenced=0 assetUsage=0 sample=[]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 32
+### after CalculateSceneDependencyData
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=0 scenes=0 assetObj=0/0 sceneReferenced=0 assetUsage=0 sample=[]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 32
+### after CalculateCustomDependencyData
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=0 scenes=0 assetObj=0/0 sceneReferenced=0 assetUsage=0 sample=[]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after CalculateAssetDependencyData
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after StripUnusedSpriteSources
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after PostDependencyCallback
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=0 files=0 bundles=0 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after GenerateBundlePacking
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=0[] usageSets=0 referenceMaps=0 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after GenerateBundleCommands
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after GenerateSubAssetPathMaps
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after GenerateBundleMaps
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after PostPackingCallback
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=0 writeMeta=0
+extras: 
+ctxCount: 33
+### after WriteSerializedFiles
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=3 writeMeta=3
+extras: 
+ctxCount: 33
+### after ArchiveAndCompressBundles
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=3 writeMeta=3 | bundleInfos=3 [props_a=hash:61222da9f2feecb6d312bd46dc4929c9,size:3323B,deps:1; props_b=hash:fa61d49e4ee0f13eff0bb32488100470,size:3166B,deps:1; shared=hash:699f53d56c5e640866f990bb3c97b6ab,size:46399B,deps:0]
+extras: 
+ctxCount: 33
+### after AppendBundleHash
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=3 writeMeta=3 | bundleInfos=3 [props_a=hash:61222da9f2feecb6d312bd46dc4929c9,size:3323B,deps:1; props_b=hash:fa61d49e4ee0f13eff0bb32488100470,size:3166B,deps:1; shared=hash:699f53d56c5e640866f990bb3c97b6ab,size:46399B,deps:0]
+extras: 
+ctxCount: 33
+### after GenerateLinkXml
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=3 writeMeta=3 | bundleInfos=3 [props_a=hash:61222da9f2feecb6d312bd46dc4929c9,size:3323B,deps:1; props_b=hash:fa61d49e4ee0f13eff0bb32488100470,size:3166B,deps:1; shared=hash:699f53d56c5e640866f990bb3c97b6ab,size:46399B,deps:0]
+extras: 
+ctxCount: 33
+### after PostWritingCallback
+params: target=StandaloneWindows64 group=Standalone compression=UnityEngine.BuildCompression appendHash=False contiguous=True useCache=True output=Artifacts/SBP\ex18-stages-StandaloneWindows64
+content: bundles=[props_a(2), props_b(1), shared(1)] assets=4 scenes=0 addresses=4 customAssets=0
+dep: assets=4 scenes=0 assetObj=16/8 sceneReferenced=0 assetUsage=4 sample=[CubeA.prefab:5/2, CubeB.prefab:5/2, CubeC.prefab:5/2]
+write: assetToFiles=4 files=3 bundles=3 writeOps=3[props_a:AssetBundleWriteOperation(10), props_b:AssetBundleWriteOperation(5), shared:AssetBundleWriteOperation(3)] usageSets=3 referenceMaps=3 assetMap=[Mat.mat->shared, CubeB.prefab->props_a, CubeA.prefab->props_a, CubeC.prefab->props_b]
+results: scriptTypeDB=True writeResults=3 writeMeta=3 | bundleInfos=3 [props_a=hash:61222da9f2feecb6d312bd46dc4929c9,size:3323B,deps:1; props_b=hash:fa61d49e4ee0f13eff0bb32488100470,size:3166B,deps:1; shared=hash:699f53d56c5e640866f990bb3c97b6ab,size:46399B,deps:0]
+extras: 
+ctxCount: 33

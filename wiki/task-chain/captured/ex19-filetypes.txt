@@ -1,0 +1,53 @@
+assets=4 scenes=0
+
+## Assets/Bundles/Props/CubeA.prefab
+  includedObjects=5 referencedObjects=2
+  [included] fileType=MetaAssetType type=GameObject path='' guid=b1665a6fc133d8d4b87ac1b4e4a645a8 localId=1266598513701572995
+  [included] fileType=MetaAssetType type=MeshFilter path='' guid=b1665a6fc133d8d4b87ac1b4e4a645a8 localId=36684013351910960
+  [included] fileType=MetaAssetType type=MeshRenderer path='' guid=b1665a6fc133d8d4b87ac1b4e4a645a8 localId=1529215442718738174
+  [included] fileType=MetaAssetType type=Transform path='' guid=b1665a6fc133d8d4b87ac1b4e4a645a8 localId=3459590857198133346
+  [included] fileType=MetaAssetType type=BoxCollider path='' guid=b1665a6fc133d8d4b87ac1b4e4a645a8 localId=6277825710962230088
+  [referenced] fileType=NonAssetType type=Mesh path='Library/unity default resources' guid=0000000000000000e000000000000000 localId=10202
+  [referenced] fileType=SerializedAssetType type=Material path='' guid=0d70bf7a4a50f0e459a53aef98ebd4c6 localId=2100000
+
+## Assets/Bundles/Props/CubeB.prefab
+  includedObjects=5 referencedObjects=2
+  [included] fileType=MetaAssetType type=GameObject path='' guid=99a41d413291dcd4eb592ecc140e8496 localId=9075267095899791906
+  [included] fileType=MetaAssetType type=MeshRenderer path='' guid=99a41d413291dcd4eb592ecc140e8496 localId=1125433689320098570
+  [included] fileType=MetaAssetType type=Transform path='' guid=99a41d413291dcd4eb592ecc140e8496 localId=1685575018863334568
+  [included] fileType=MetaAssetType type=BoxCollider path='' guid=99a41d413291dcd4eb592ecc140e8496 localId=4370102104551244253
+  [included] fileType=MetaAssetType type=MeshFilter path='' guid=99a41d413291dcd4eb592ecc140e8496 localId=7099650654202240039
+  [referenced] fileType=NonAssetType type=Mesh path='Library/unity default resources' guid=0000000000000000e000000000000000 localId=10202
+  [referenced] fileType=SerializedAssetType type=Material path='' guid=0d70bf7a4a50f0e459a53aef98ebd4c6 localId=2100000
+
+## Assets/Bundles/Props/CubeC.prefab
+  includedObjects=5 referencedObjects=2
+  [included] fileType=MetaAssetType type=GameObject path='' guid=e5c1538996593a74b8540059bb0c5a33 localId=6332047240722659429
+  [included] fileType=MetaAssetType type=MeshRenderer path='' guid=e5c1538996593a74b8540059bb0c5a33 localId=330406550469212689
+  [included] fileType=MetaAssetType type=Transform path='' guid=e5c1538996593a74b8540059bb0c5a33 localId=5303138715363454066
+  [included] fileType=MetaAssetType type=BoxCollider path='' guid=e5c1538996593a74b8540059bb0c5a33 localId=5472882417118650175
+  [included] fileType=MetaAssetType type=MeshFilter path='' guid=e5c1538996593a74b8540059bb0c5a33 localId=6030536233294387651
+  [referenced] fileType=NonAssetType type=Mesh path='Library/unity default resources' guid=0000000000000000e000000000000000 localId=10202
+  [referenced] fileType=SerializedAssetType type=Material path='' guid=0d70bf7a4a50f0e459a53aef98ebd4c6 localId=2100000
+
+## Assets/Bundles/Shared/Mat.mat
+  includedObjects=1 referencedObjects=2
+  [included] fileType=SerializedAssetType type=Material path='' guid=0d70bf7a4a50f0e459a53aef98ebd4c6 localId=2100000
+  [referenced] fileType=NonAssetType type=Shader path='Resources/unity_builtin_extra' guid=0000000000000000f000000000000000 localId=46
+  [referenced] fileType=NonAssetType type=Shader path='Resources/unity_builtin_extra' guid=0000000000000000f000000000000000 localId=6
+
+## fileType 分布
+  MetaAssetType / BoxCollider = 3
+  MetaAssetType / GameObject = 3
+  MetaAssetType / MeshFilter = 3
+  MetaAssetType / MeshRenderer = 3
+  MetaAssetType / Transform = 3
+  NonAssetType / Mesh = 3
+  NonAssetType / Shader = 2
+  SerializedAssetType / Material = 4
+
+## (fileType, filePath) 分布
+  MetaAssetType /  = 15
+  NonAssetType / Library/unity default resources = 3
+  NonAssetType / Resources/unity_builtin_extra = 2
+  SerializedAssetType /  = 4
