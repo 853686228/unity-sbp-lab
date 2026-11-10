@@ -1,0 +1,232 @@
+CachedInfo dump — CalculateAssetDependencyData
+
+=== build cold code=Success ===
+
+############################################################
+CachedInfo[0] Assets/Bundles/Props/CubeA.prefab
+  Asset CacheEntry:
+    Type=Asset Guid=b1665a6fc133d8d4b87ac1b4e4a645a8 Version=-6 Hash=2ac0aacc075c01eff68a5033f2c19cad
+    infoFile=Library/BuildCache/b1/b1665a6fc133d8d4b87ac1b4e4a645a8/1ee54b17d48ca065a9ce520224b1a2e4/b1665a6fc133d8d4b87ac1b4e4a645a8.info
+  Data.Length=6
+
+  Data[0] AssetLoadInfo:
+    asset=b1665a6fc133d8d4b87ac1b4e4a645a8
+    address=null
+    includedObjects=5
+      [0] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1266598513701572995 type=MetaAssetType path=''
+      [1] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=36684013351910960 type=MetaAssetType path=''
+      [2] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1529215442718738174 type=MetaAssetType path=''
+      [3] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=3459590857198133346 type=MetaAssetType path=''
+      [4] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=6277825710962230088 type=MetaAssetType path=''
+    referencedObjects=2
+      [0] guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'
+      [1] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+
+  Data[1] BuildUsageTagSet:
+    Type=BuildUsageTagSet Hash128=00000000000000000000000000000000
+
+  Data[2] SpriteImporterData: null
+  Data[3] ExtendedAssetData: null
+
+  Data[4] List<ObjectTypes>:
+    [0] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1266598513701572995 type=MetaAssetType path=''  Types=[GameObject]
+    [1] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=36684013351910960 type=MetaAssetType path=''  Types=[MeshFilter]
+    [2] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1529215442718738174 type=MetaAssetType path=''  Types=[MeshRenderer]
+    [3] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=3459590857198133346 type=MetaAssetType path=''  Types=[Transform]
+    [4] guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=6277825710962230088 type=MetaAssetType path=''  Types=[BoxCollider]
+    [5] guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'  Types=[Mesh]
+    [6] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''  Types=[Material]
+
+  Data[5] List<ObjectDependencyInfo>:
+    [0] Object=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1266598513701572995 type=MetaAssetType path=''
+         dep[0]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=36684013351910960 type=MetaAssetType path=''
+         dep[1]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1529215442718738174 type=MetaAssetType path=''
+         dep[2]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=3459590857198133346 type=MetaAssetType path=''
+         dep[3]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=6277825710962230088 type=MetaAssetType path=''
+    [1] Object=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=36684013351910960 type=MetaAssetType path=''
+         dep[0]=guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'
+         dep[1]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1266598513701572995 type=MetaAssetType path=''
+    [2] Object=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1529215442718738174 type=MetaAssetType path=''
+         dep[0]=guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+         dep[1]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1266598513701572995 type=MetaAssetType path=''
+    [3] Object=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=3459590857198133346 type=MetaAssetType path=''
+         dep[0]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1266598513701572995 type=MetaAssetType path=''
+    [4] Object=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=6277825710962230088 type=MetaAssetType path=''
+         dep[0]=guid=b1665a6fc133d8d4b87ac1b4e4a645a8 fileID=1266598513701572995 type=MetaAssetType path=''
+
+  Dependencies = CacheEntry[9]:
+    [0] type=Asset guid=0000000000000000e000000000000000 version=1 hash=6ea9104438180f0d6a93d83d974e9cc5 assetPath='Library/unity default resources'
+    [1] type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=1 hash=671ad71a08869f900ac3fda6cdf5ac50 assetPath='Assets/Bundles/Shared/Mat.mat'
+    [2] type=ScriptType guid=dab847ae348b2cd27f7e520c384b4a63 version=0 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [3] type=ScriptType guid=e977a30784c6eecbe942c850392ea767 version=1 hash=3c319971302349d5c60f2899a8031a6a scriptType='UnityEngine.MeshFilter, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [4] type=ScriptType guid=e1ce7c99dab1d05e97dc4d0f3c5e257e version=2 hash=ead26004d10747f88eb95d451c640913 scriptType='UnityEngine.MeshRenderer, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [5] type=ScriptType guid=b4110be95cca205aa3cc0958b4d8328b version=3 hash=3c319971302349d5c60f2899a8031a6a scriptType='UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [6] type=ScriptType guid=07b8dea771e49fd792d1c45f15dfff07 version=4 hash=ead26004d10747f88eb95d451c640913 scriptType='UnityEngine.BoxCollider, UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [7] type=ScriptType guid=e613b6ac8a57f27359c4f5fc2bd032e6 version=5 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [8] type=ScriptType guid=ac46b89374168a64efa33af893d7db03 version=6 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+
+############################################################
+CachedInfo[1] Assets/Bundles/Props/CubeB.prefab
+  Asset CacheEntry:
+    Type=Asset Guid=99a41d413291dcd4eb592ecc140e8496 Version=-6 Hash=9aefb3d56716f4599b6e1cb077988347
+    infoFile=Library/BuildCache/99/99a41d413291dcd4eb592ecc140e8496/2124a0fb7d7cfd570dec34bd9406d92a/99a41d413291dcd4eb592ecc140e8496.info
+  Data.Length=6
+
+  Data[0] AssetLoadInfo:
+    asset=99a41d413291dcd4eb592ecc140e8496
+    address=null
+    includedObjects=5
+      [0] guid=99a41d413291dcd4eb592ecc140e8496 fileID=9075267095899791906 type=MetaAssetType path=''
+      [1] guid=99a41d413291dcd4eb592ecc140e8496 fileID=1125433689320098570 type=MetaAssetType path=''
+      [2] guid=99a41d413291dcd4eb592ecc140e8496 fileID=1685575018863334568 type=MetaAssetType path=''
+      [3] guid=99a41d413291dcd4eb592ecc140e8496 fileID=4370102104551244253 type=MetaAssetType path=''
+      [4] guid=99a41d413291dcd4eb592ecc140e8496 fileID=7099650654202240039 type=MetaAssetType path=''
+    referencedObjects=2
+      [0] guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'
+      [1] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+
+  Data[1] BuildUsageTagSet:
+    Type=BuildUsageTagSet Hash128=00000000000000000000000000000000
+
+  Data[2] SpriteImporterData: null
+  Data[3] ExtendedAssetData: null
+
+  Data[4] List<ObjectTypes>:
+    [0] guid=99a41d413291dcd4eb592ecc140e8496 fileID=9075267095899791906 type=MetaAssetType path=''  Types=[GameObject]
+    [1] guid=99a41d413291dcd4eb592ecc140e8496 fileID=1125433689320098570 type=MetaAssetType path=''  Types=[MeshRenderer]
+    [2] guid=99a41d413291dcd4eb592ecc140e8496 fileID=1685575018863334568 type=MetaAssetType path=''  Types=[Transform]
+    [3] guid=99a41d413291dcd4eb592ecc140e8496 fileID=4370102104551244253 type=MetaAssetType path=''  Types=[BoxCollider]
+    [4] guid=99a41d413291dcd4eb592ecc140e8496 fileID=7099650654202240039 type=MetaAssetType path=''  Types=[MeshFilter]
+    [5] guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'  Types=[Mesh]
+    [6] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''  Types=[Material]
+
+  Data[5] List<ObjectDependencyInfo>:
+    [0] Object=guid=99a41d413291dcd4eb592ecc140e8496 fileID=9075267095899791906 type=MetaAssetType path=''
+         dep[0]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=1125433689320098570 type=MetaAssetType path=''
+         dep[1]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=1685575018863334568 type=MetaAssetType path=''
+         dep[2]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=4370102104551244253 type=MetaAssetType path=''
+         dep[3]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=7099650654202240039 type=MetaAssetType path=''
+    [1] Object=guid=99a41d413291dcd4eb592ecc140e8496 fileID=1125433689320098570 type=MetaAssetType path=''
+         dep[0]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=9075267095899791906 type=MetaAssetType path=''
+         dep[1]=guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+    [2] Object=guid=99a41d413291dcd4eb592ecc140e8496 fileID=1685575018863334568 type=MetaAssetType path=''
+         dep[0]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=9075267095899791906 type=MetaAssetType path=''
+    [3] Object=guid=99a41d413291dcd4eb592ecc140e8496 fileID=4370102104551244253 type=MetaAssetType path=''
+         dep[0]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=9075267095899791906 type=MetaAssetType path=''
+    [4] Object=guid=99a41d413291dcd4eb592ecc140e8496 fileID=7099650654202240039 type=MetaAssetType path=''
+         dep[0]=guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'
+         dep[1]=guid=99a41d413291dcd4eb592ecc140e8496 fileID=9075267095899791906 type=MetaAssetType path=''
+
+  Dependencies = CacheEntry[9]:
+    [0] type=Asset guid=0000000000000000e000000000000000 version=1 hash=6ea9104438180f0d6a93d83d974e9cc5 assetPath='Library/unity default resources'
+    [1] type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=1 hash=671ad71a08869f900ac3fda6cdf5ac50 assetPath='Assets/Bundles/Shared/Mat.mat'
+    [2] type=ScriptType guid=dab847ae348b2cd27f7e520c384b4a63 version=0 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [3] type=ScriptType guid=e1ce7c99dab1d05e97dc4d0f3c5e257e version=1 hash=ead26004d10747f88eb95d451c640913 scriptType='UnityEngine.MeshRenderer, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [4] type=ScriptType guid=b4110be95cca205aa3cc0958b4d8328b version=2 hash=3c319971302349d5c60f2899a8031a6a scriptType='UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [5] type=ScriptType guid=07b8dea771e49fd792d1c45f15dfff07 version=3 hash=ead26004d10747f88eb95d451c640913 scriptType='UnityEngine.BoxCollider, UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [6] type=ScriptType guid=e977a30784c6eecbe942c850392ea767 version=4 hash=3c319971302349d5c60f2899a8031a6a scriptType='UnityEngine.MeshFilter, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [7] type=ScriptType guid=e613b6ac8a57f27359c4f5fc2bd032e6 version=5 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [8] type=ScriptType guid=ac46b89374168a64efa33af893d7db03 version=6 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+
+############################################################
+CachedInfo[2] Assets/Bundles/Props/CubeC.prefab
+  Asset CacheEntry:
+    Type=Asset Guid=e5c1538996593a74b8540059bb0c5a33 Version=-6 Hash=e6e08565272d52600fcb8f25ee38b460
+    infoFile=Library/BuildCache/e5/e5c1538996593a74b8540059bb0c5a33/007473017586e83467d9417a459f3497/e5c1538996593a74b8540059bb0c5a33.info
+  Data.Length=6
+
+  Data[0] AssetLoadInfo:
+    asset=e5c1538996593a74b8540059bb0c5a33
+    address=null
+    includedObjects=5
+      [0] guid=e5c1538996593a74b8540059bb0c5a33 fileID=6332047240722659429 type=MetaAssetType path=''
+      [1] guid=e5c1538996593a74b8540059bb0c5a33 fileID=330406550469212689 type=MetaAssetType path=''
+      [2] guid=e5c1538996593a74b8540059bb0c5a33 fileID=5303138715363454066 type=MetaAssetType path=''
+      [3] guid=e5c1538996593a74b8540059bb0c5a33 fileID=5472882417118650175 type=MetaAssetType path=''
+      [4] guid=e5c1538996593a74b8540059bb0c5a33 fileID=6030536233294387651 type=MetaAssetType path=''
+    referencedObjects=2
+      [0] guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'
+      [1] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+
+  Data[1] BuildUsageTagSet:
+    Type=BuildUsageTagSet Hash128=00000000000000000000000000000000
+
+  Data[2] SpriteImporterData: null
+  Data[3] ExtendedAssetData: null
+
+  Data[4] List<ObjectTypes>:
+    [0] guid=e5c1538996593a74b8540059bb0c5a33 fileID=6332047240722659429 type=MetaAssetType path=''  Types=[GameObject]
+    [1] guid=e5c1538996593a74b8540059bb0c5a33 fileID=330406550469212689 type=MetaAssetType path=''  Types=[MeshRenderer]
+    [2] guid=e5c1538996593a74b8540059bb0c5a33 fileID=5303138715363454066 type=MetaAssetType path=''  Types=[Transform]
+    [3] guid=e5c1538996593a74b8540059bb0c5a33 fileID=5472882417118650175 type=MetaAssetType path=''  Types=[BoxCollider]
+    [4] guid=e5c1538996593a74b8540059bb0c5a33 fileID=6030536233294387651 type=MetaAssetType path=''  Types=[MeshFilter]
+    [5] guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'  Types=[Mesh]
+    [6] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''  Types=[Material]
+
+  Data[5] List<ObjectDependencyInfo>:
+    [0] Object=guid=e5c1538996593a74b8540059bb0c5a33 fileID=6332047240722659429 type=MetaAssetType path=''
+         dep[0]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=330406550469212689 type=MetaAssetType path=''
+         dep[1]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=5303138715363454066 type=MetaAssetType path=''
+         dep[2]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=5472882417118650175 type=MetaAssetType path=''
+         dep[3]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=6030536233294387651 type=MetaAssetType path=''
+    [1] Object=guid=e5c1538996593a74b8540059bb0c5a33 fileID=330406550469212689 type=MetaAssetType path=''
+         dep[0]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=6332047240722659429 type=MetaAssetType path=''
+         dep[1]=guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+    [2] Object=guid=e5c1538996593a74b8540059bb0c5a33 fileID=5303138715363454066 type=MetaAssetType path=''
+         dep[0]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=6332047240722659429 type=MetaAssetType path=''
+    [3] Object=guid=e5c1538996593a74b8540059bb0c5a33 fileID=5472882417118650175 type=MetaAssetType path=''
+         dep[0]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=6332047240722659429 type=MetaAssetType path=''
+    [4] Object=guid=e5c1538996593a74b8540059bb0c5a33 fileID=6030536233294387651 type=MetaAssetType path=''
+         dep[0]=guid=0000000000000000e000000000000000 fileID=10202 type=NonAssetType path='Library/unity default resources'
+         dep[1]=guid=e5c1538996593a74b8540059bb0c5a33 fileID=6332047240722659429 type=MetaAssetType path=''
+
+  Dependencies = CacheEntry[9]:
+    [0] type=Asset guid=0000000000000000e000000000000000 version=1 hash=6ea9104438180f0d6a93d83d974e9cc5 assetPath='Library/unity default resources'
+    [1] type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=1 hash=671ad71a08869f900ac3fda6cdf5ac50 assetPath='Assets/Bundles/Shared/Mat.mat'
+    [2] type=ScriptType guid=dab847ae348b2cd27f7e520c384b4a63 version=0 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [3] type=ScriptType guid=e1ce7c99dab1d05e97dc4d0f3c5e257e version=1 hash=ead26004d10747f88eb95d451c640913 scriptType='UnityEngine.MeshRenderer, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [4] type=ScriptType guid=b4110be95cca205aa3cc0958b4d8328b version=2 hash=3c319971302349d5c60f2899a8031a6a scriptType='UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [5] type=ScriptType guid=07b8dea771e49fd792d1c45f15dfff07 version=3 hash=ead26004d10747f88eb95d451c640913 scriptType='UnityEngine.BoxCollider, UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [6] type=ScriptType guid=e977a30784c6eecbe942c850392ea767 version=4 hash=3c319971302349d5c60f2899a8031a6a scriptType='UnityEngine.MeshFilter, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [7] type=ScriptType guid=e613b6ac8a57f27359c4f5fc2bd032e6 version=5 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [8] type=ScriptType guid=ac46b89374168a64efa33af893d7db03 version=6 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+
+############################################################
+CachedInfo[3] Assets/Bundles/Shared/Mat.mat
+  Asset CacheEntry:
+    Type=Asset Guid=0d70bf7a4a50f0e459a53aef98ebd4c6 Version=-6 Hash=5e6f11c071a3042e4d6b942b75d16001
+    infoFile=Library/BuildCache/0d/0d70bf7a4a50f0e459a53aef98ebd4c6/50f22b512cb303aa01ead11c9a0a1376/0d70bf7a4a50f0e459a53aef98ebd4c6.info
+  Data.Length=6
+
+  Data[0] AssetLoadInfo:
+    asset=0d70bf7a4a50f0e459a53aef98ebd4c6
+    address=null
+    includedObjects=1
+      [0] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+    referencedObjects=2
+      [0] guid=0000000000000000f000000000000000 fileID=46 type=NonAssetType path='Resources/unity_builtin_extra'
+      [1] guid=0000000000000000f000000000000000 fileID=6 type=NonAssetType path='Resources/unity_builtin_extra'
+
+  Data[1] BuildUsageTagSet:
+    Type=BuildUsageTagSet Hash128=a4099605bce7a687036f1367a6c06d45
+
+  Data[2] SpriteImporterData: null
+  Data[3] ExtendedAssetData: null
+
+  Data[4] List<ObjectTypes>:
+    [0] guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''  Types=[Material]
+    [1] guid=0000000000000000f000000000000000 fileID=46 type=NonAssetType path='Resources/unity_builtin_extra'  Types=[Shader]
+    [2] guid=0000000000000000f000000000000000 fileID=6 type=NonAssetType path='Resources/unity_builtin_extra'  Types=[Shader]
+
+  Data[5] List<ObjectDependencyInfo>:
+    [0] Object=guid=0d70bf7a4a50f0e459a53aef98ebd4c6 fileID=2100000 type=SerializedAssetType path=''
+         dep[0]=guid=0000000000000000f000000000000000 fileID=46 type=NonAssetType path='Resources/unity_builtin_extra'
+    [1] Object=guid=0000000000000000f000000000000000 fileID=46 type=NonAssetType path='Resources/unity_builtin_extra'
+         dep[0]=guid=0000000000000000f000000000000000 fileID=6 type=NonAssetType path='Resources/unity_builtin_extra'
+
+  Dependencies = CacheEntry[3]:
+    [0] type=Asset guid=0000000000000000f000000000000000 version=1 hash=ad55f6843142a5d1c3504a3f97f1b629 assetPath='Resources/unity_builtin_extra'
+    [1] type=ScriptType guid=ac46b89374168a64efa33af893d7db03 version=0 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+    [2] type=ScriptType guid=ed5a4927aba8883aeecfa82409708e3c version=1 hash=1909f56bfc062723c751e8b465ee728b scriptType='UnityEngine.Shader, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+
+=== build dump code=Success ===

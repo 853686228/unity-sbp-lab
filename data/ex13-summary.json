@@ -1,0 +1,27 @@
+{
+    "builtAt": "2026-11-07 12:59:29",
+    "platform": "Android",
+    "rows": [
+        {
+            "config": "A-per-bundle-LZ4",
+            "compression": "UnityEngine.BuildCompression",
+            "bundleCount": 3,
+            "totalBytes": 143492,
+            "elapsedMs": 614
+        },
+        {
+            "config": "B-merged-LZ4",
+            "compression": "UnityEngine.BuildCompression",
+            "bundleCount": 2,
+            "totalBytes": 140470,
+            "elapsedMs": 624
+        },
+        {
+            "config": "C-per-bundle-LZMA",
+            "compression": "UnityEngine.BuildCompression",
+            "bundleCount": 3,
+            "totalBytes": 107462,
+            "elapsedMs": 660
+        }
+    ]
+}

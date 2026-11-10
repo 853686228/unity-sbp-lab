@@ -1,0 +1,43 @@
+{
+    "builtAt": "2026-11-08 13:44:13",
+    "platform": "Android",
+    "sourceSummary": "源内容：heavy_audio(55 个资源, 26.29 MB)、heavy_textures(8 个资源, 643.2 KB)、heavy_art_a(30 个资源, 76.68 MB)、heavy_art_b(30 个资源, 76.22 MB)，合计 179.81 MB",
+    "rows": [
+        {
+            "compression": "LZMA",
+            "coldMs": 5704,
+            "warmMs": 1197,
+            "totalBytes": 8995784,
+            "bundleSizes": [
+                "heavy_audio|2728788",
+                "heavy_textures|278174",
+                "heavy_art_a|3336682",
+                "heavy_art_b|2652140"
+            ]
+        },
+        {
+            "compression": "LZ4",
+            "coldMs": 2611,
+            "warmMs": 1172,
+            "totalBytes": 15230860,
+            "bundleSizes": [
+                "heavy_audio|2727510",
+                "heavy_textures|4079791",
+                "heavy_art_a|5016816",
+                "heavy_art_b|3406743"
+            ]
+        },
+        {
+            "compression": "Uncompressed",
+            "coldMs": 2510,
+            "warmMs": 1172,
+            "totalBytes": 115692784,
+            "bundleSizes": [
+                "heavy_audio|2742448",
+                "heavy_textures|100670448",
+                "heavy_art_a|7726848",
+                "heavy_art_b|4553040"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+# Unity
+lab-project/[Ll]ibrary/
+lab-project/[Tt]emp/
+lab-project/[Ll]ogs/
+lab-project/[Oo]bj/
+lab-project/UserSettings/
+lab-project/Artifacts/
+
+# Heavy assets: keep only the README
+lab-project/Assets/Bundles/Heavy/*
+!lab-project/Assets/Bundles/Heavy/README.md
+
+# IDE / build
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# OS
+.DS_Store
+Thumbs.db

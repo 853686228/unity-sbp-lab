@@ -1,0 +1,30 @@
+{
+    "target": "Android",
+    "builtAt": "2026-11-07 17:12:11",
+    "bundles": [
+        {
+            "name": "props_a",
+            "file": "Artifacts/SBP\\sbp-Android/props_a",
+            "hash": "61222da9f2feecb6d312bd46dc4929c9",
+            "crc": 465173225,
+            "size": 3323,
+            "deps": 1
+        },
+        {
+            "name": "props_b",
+            "file": "Artifacts/SBP\\sbp-Android/props_b",
+            "hash": "fa61d49e4ee0f13eff0bb32488100470",
+            "crc": 2654005591,
+            "size": 3164,
+            "deps": 1
+        },
+        {
+            "name": "shared",
+            "file": "Artifacts/SBP\\sbp-Android/shared",
+            "hash": "1287c555c0b11aa23a8ced55227c2e57",
+            "crc": 2303542340,
+            "size": 137005,
+            "deps": 0
+        }
+    ]
+}

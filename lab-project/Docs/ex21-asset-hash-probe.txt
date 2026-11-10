@@ -1,0 +1,110 @@
+--- snapshot: before ---
+[hash] before Assets/Bundles/Props/CubeA.prefab depHash=127b22b81cb9560511aacc46bc82a555 md5=1e4486d809f356dadd67150e4a5afd64
+[hash] before Assets/Bundles/Props/CubeB.prefab depHash=3416669268471d21bccdb900f3aefecb md5=47135a63e6a3f26e5453e38ad3e8d5c7
+[hash] before Assets/Bundles/Props/CubeC.prefab depHash=dcafcf192e02b3efd931b5473a2fbd95 md5=fb83180dec04b12901f3f7968adb55a3
+[hash] before Assets/Bundles/Shared/Mat.mat depHash=f9b31f15006d514cd7166f332e9dbfe1 md5=c1a787ce55293c800ab4f31b08f6d853
+[Load] build=cold caller=CalculateAssetDependencyData.RunInternal entries=4 hits=0 misses=4 ms=6
+  load type=Asset guid=b1665a6fc133d8d4b87ac1b4e4a645a8 version=-6 hash=2ac0aacc075c01eff68a5033f2c19cad hit=False info=missing artifacts=0files/0B sample=
+  load type=Asset guid=99a41d413291dcd4eb592ecc140e8496 version=-6 hash=9aefb3d56716f4599b6e1cb077988347 hit=False info=missing artifacts=0files/0B sample=
+  load type=Asset guid=e5c1538996593a74b8540059bb0c5a33 version=-6 hash=e6e08565272d52600fcb8f25ee38b460 hit=False info=missing artifacts=0files/0B sample=
+  load type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=-6 hash=5e6f11c071a3042e4d6b942b75d16001 hit=False info=missing artifacts=0files/0B sample=
+[Save] build=cold caller=CalculateAssetDependencyData.RunInternal count=4 ms=40
+  save type=Asset guid=b1665a6fc133d8d4b87ac1b4e4a645a8 version=-6 hash=2ac0aacc075c01eff68a5033f2c19cad hit=- info=exists,6079B artifacts=1files/6079B sample=b1665a6fc133d8d4b87ac1b4e4a645a8.info
+       data=6 deps=9
+  save type=Asset guid=99a41d413291dcd4eb592ecc140e8496 version=-6 hash=9aefb3d56716f4599b6e1cb077988347 hit=- info=exists,6079B artifacts=1files/6079B sample=99a41d413291dcd4eb592ecc140e8496.info
+       data=6 deps=9
+  save type=Asset guid=e5c1538996593a74b8540059bb0c5a33 version=-6 hash=e6e08565272d52600fcb8f25ee38b460 hit=- info=exists,6079B artifacts=1files/6079B sample=e5c1538996593a74b8540059bb0c5a33.info
+       data=6 deps=9
+  save type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=-6 hash=5e6f11c071a3042e4d6b942b75d16001 hit=- info=exists,3717B artifacts=1files/3717B sample=0d70bf7a4a50f0e459a53aef98ebd4c6.info
+       data=6 deps=3
+[Load] build=cold caller=WriteSerializedFiles.Run entries=3 hits=0 misses=3 ms=0
+  load type=Data guid=070aa2b259104d7f34d98e674e4ab7d6 version=4 hash=1c2cdf941c77cd872da1c6113696ec33 hit=False info=missing artifacts=0files/0B sample=
+  load type=Data guid=f8d0a88b954cefbbb9157d175cd3e5d1 version=4 hash=43d08eb714d7a808426c483181179b71 hit=False info=missing artifacts=0files/0B sample=
+  load type=Data guid=366d5936fa6d12800305d394e8b442c1 version=4 hash=3d43da2d461e185022e92238efd472c4 hit=False info=missing artifacts=0files/0B sample=
+[Save] build=cold caller=WriteSerializedFiles.Run count=3 ms=5
+  save type=Data guid=070aa2b259104d7f34d98e674e4ab7d6 version=4 hash=1c2cdf941c77cd872da1c6113696ec33 hit=- info=exists,3087B artifacts=2files/12118B sample=070aa2b259104d7f34d98e674e4ab7d6.info
+       data=2 deps=0
+  save type=Data guid=f8d0a88b954cefbbb9157d175cd3e5d1 version=4 hash=43d08eb714d7a808426c483181179b71 hit=- info=exists,3087B artifacts=2files/11463B sample=CAB-c2692dc06dec32d93f43b7c2e1768b1a
+       data=2 deps=0
+  save type=Data guid=366d5936fa6d12800305d394e8b442c1 version=4 hash=3d43da2d461e185022e92238efd472c4 hit=- info=exists,2580B artifacts=2files/149408B sample=366d5936fa6d12800305d394e8b442c1.info
+       data=2 deps=0
+[Load] build=cold caller=ArchiveAndCompressBundles.Run entries=3 hits=0 misses=3 ms=0
+  load type=Data guid=4f5773e9b494b710d8f7d331a483a0e2 version=2 hash=5590c49a64e04b16d746550b837efd14 hit=False info=missing artifacts=0files/0B sample=
+  load type=Data guid=5feb5e7233e7e003cb624f2e9ecb35ef version=2 hash=d8fbde0cb913031dcc8f05eb6e87ed1d hit=False info=missing artifacts=0files/0B sample=
+  load type=Data guid=49338e741e8d01a788c1919f1770ea0d version=2 hash=3deca8298e3a1af04c68a4c4d2efc955 hit=False info=missing artifacts=0files/0B sample=
+[Save] build=cold caller=ArchiveAndCompressBundles.Run count=3 ms=3
+  save type=Data guid=4f5773e9b494b710d8f7d331a483a0e2 version=2 hash=5590c49a64e04b16d746550b837efd14 hit=- info=exists,1062B artifacts=2files/4385B sample=4f5773e9b494b710d8f7d331a483a0e2.info
+       data=1 deps=0
+  save type=Data guid=5feb5e7233e7e003cb624f2e9ecb35ef version=2 hash=d8fbde0cb913031dcc8f05eb6e87ed1d hit=- info=exists,1062B artifacts=2files/4228B sample=5feb5e7233e7e003cb624f2e9ecb35ef.info
+       data=1 deps=0
+  save type=Data guid=49338e741e8d01a788c1919f1770ea0d version=2 hash=3deca8298e3a1af04c68a4c4d2efc955 hit=- info=exists,1051B artifacts=2files/47450B sample=49338e741e8d01a788c1919f1770ea0d.info
+       data=1 deps=0
+
+=== build cold ===
+code=Success totalMs=3931
+--- snapshot: after-prefab-change ---
+[hash] after-prefab-change Assets/Bundles/Props/CubeA.prefab depHash=0bb38b7580926386c8a7c5b7d3885b1d md5=7caf28e0e48cb32f5dfdca35fc1d0a35
+[hash] after-prefab-change Assets/Bundles/Props/CubeB.prefab depHash=3416669268471d21bccdb900f3aefecb md5=47135a63e6a3f26e5453e38ad3e8d5c7
+[hash] after-prefab-change Assets/Bundles/Props/CubeC.prefab depHash=dcafcf192e02b3efd931b5473a2fbd95 md5=fb83180dec04b12901f3f7968adb55a3
+[hash] after-prefab-change Assets/Bundles/Shared/Mat.mat depHash=f9b31f15006d514cd7166f332e9dbfe1 md5=c1a787ce55293c800ab4f31b08f6d853
+[Load] build=after-prefab-change caller=CalculateAssetDependencyData.RunInternal entries=4 hits=3 misses=1 ms=17
+  load type=Asset guid=b1665a6fc133d8d4b87ac1b4e4a645a8 version=-6 hash=cf07eed201628294628ab94f2370f63f hit=False info=missing artifacts=0files/0B sample=
+  load type=Asset guid=99a41d413291dcd4eb592ecc140e8496 version=-6 hash=9aefb3d56716f4599b6e1cb077988347 hit=True info=exists,6079B artifacts=1files/6079B sample=99a41d413291dcd4eb592ecc140e8496.info
+  load type=Asset guid=e5c1538996593a74b8540059bb0c5a33 version=-6 hash=e6e08565272d52600fcb8f25ee38b460 hit=True info=exists,6079B artifacts=1files/6079B sample=e5c1538996593a74b8540059bb0c5a33.info
+  load type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=-6 hash=5e6f11c071a3042e4d6b942b75d16001 hit=True info=exists,3717B artifacts=1files/3717B sample=0d70bf7a4a50f0e459a53aef98ebd4c6.info
+[Save] build=after-prefab-change caller=CalculateAssetDependencyData.RunInternal count=1 ms=4
+  save type=Asset guid=b1665a6fc133d8d4b87ac1b4e4a645a8 version=-6 hash=cf07eed201628294628ab94f2370f63f hit=- info=exists,6079B artifacts=1files/6079B sample=b1665a6fc133d8d4b87ac1b4e4a645a8.info
+       data=6 deps=9
+[Load] build=after-prefab-change caller=WriteSerializedFiles.Run entries=3 hits=2 misses=1 ms=7
+  load type=Data guid=070aa2b259104d7f34d98e674e4ab7d6 version=4 hash=09eab54375b29030d54742a7ad8a8423 hit=False info=missing artifacts=0files/0B sample=
+  load type=Data guid=f8d0a88b954cefbbb9157d175cd3e5d1 version=4 hash=43d08eb714d7a808426c483181179b71 hit=True info=exists,3087B artifacts=2files/11463B sample=CAB-c2692dc06dec32d93f43b7c2e1768b1a
+  load type=Data guid=366d5936fa6d12800305d394e8b442c1 version=4 hash=3d43da2d461e185022e92238efd472c4 hit=True info=exists,2580B artifacts=2files/149408B sample=366d5936fa6d12800305d394e8b442c1.info
+[Save] build=after-prefab-change caller=WriteSerializedFiles.Run count=1 ms=6
+  save type=Data guid=070aa2b259104d7f34d98e674e4ab7d6 version=4 hash=09eab54375b29030d54742a7ad8a8423 hit=- info=exists,3087B artifacts=2files/12118B sample=070aa2b259104d7f34d98e674e4ab7d6.info
+       data=2 deps=0
+[Load] build=after-prefab-change caller=ArchiveAndCompressBundles.Run entries=3 hits=2 misses=1 ms=3
+  load type=Data guid=4f5773e9b494b710d8f7d331a483a0e2 version=2 hash=d7b93e7e2d2e76d56e50f6c28de32cc9 hit=False info=missing artifacts=0files/0B sample=
+  load type=Data guid=5feb5e7233e7e003cb624f2e9ecb35ef version=2 hash=d8fbde0cb913031dcc8f05eb6e87ed1d hit=True info=exists,1062B artifacts=2files/4228B sample=5feb5e7233e7e003cb624f2e9ecb35ef.info
+  load type=Data guid=49338e741e8d01a788c1919f1770ea0d version=2 hash=3deca8298e3a1af04c68a4c4d2efc955 hit=True info=exists,1051B artifacts=2files/47450B sample=49338e741e8d01a788c1919f1770ea0d.info
+[Save] build=after-prefab-change caller=ArchiveAndCompressBundles.Run count=1 ms=2
+  save type=Data guid=4f5773e9b494b710d8f7d331a483a0e2 version=2 hash=d7b93e7e2d2e76d56e50f6c28de32cc9 hit=- info=exists,1062B artifacts=2files/4385B sample=4f5773e9b494b710d8f7d331a483a0e2.info
+       data=1 deps=0
+
+=== build after-prefab-change ===
+code=Success totalMs=68
+--- snapshot: after-material-change ---
+[hash] after-material-change Assets/Bundles/Props/CubeA.prefab depHash=0bb38b7580926386c8a7c5b7d3885b1d md5=7caf28e0e48cb32f5dfdca35fc1d0a35
+[hash] after-material-change Assets/Bundles/Props/CubeB.prefab depHash=3416669268471d21bccdb900f3aefecb md5=47135a63e6a3f26e5453e38ad3e8d5c7
+[hash] after-material-change Assets/Bundles/Props/CubeC.prefab depHash=dcafcf192e02b3efd931b5473a2fbd95 md5=fb83180dec04b12901f3f7968adb55a3
+[hash] after-material-change Assets/Bundles/Shared/Mat.mat depHash=ce9946df0c51d6cd362ca87a52dd0ce7 md5=d797e26b5930b9547ca12ea92b94a792
+[Load] build=after-material-change caller=CalculateAssetDependencyData.RunInternal entries=4 hits=0 misses=4 ms=6
+  load type=Asset guid=b1665a6fc133d8d4b87ac1b4e4a645a8 version=-6 hash=cf07eed201628294628ab94f2370f63f hit=False info=exists,6079B artifacts=1files/6079B sample=b1665a6fc133d8d4b87ac1b4e4a645a8.info
+  load type=Asset guid=99a41d413291dcd4eb592ecc140e8496 version=-6 hash=9aefb3d56716f4599b6e1cb077988347 hit=False info=exists,6079B artifacts=1files/6079B sample=99a41d413291dcd4eb592ecc140e8496.info
+  load type=Asset guid=e5c1538996593a74b8540059bb0c5a33 version=-6 hash=e6e08565272d52600fcb8f25ee38b460 hit=False info=exists,6079B artifacts=1files/6079B sample=e5c1538996593a74b8540059bb0c5a33.info
+  load type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=-6 hash=909ddf4eb80f9850f2ccc0158abdb8a1 hit=False info=missing artifacts=0files/0B sample=
+[Save] build=after-material-change caller=CalculateAssetDependencyData.RunInternal count=4 ms=5
+  save type=Asset guid=b1665a6fc133d8d4b87ac1b4e4a645a8 version=-6 hash=cf07eed201628294628ab94f2370f63f hit=- info=exists,6079B artifacts=1files/6079B sample=b1665a6fc133d8d4b87ac1b4e4a645a8.info
+       data=6 deps=9
+  save type=Asset guid=99a41d413291dcd4eb592ecc140e8496 version=-6 hash=9aefb3d56716f4599b6e1cb077988347 hit=- info=exists,6079B artifacts=1files/6079B sample=99a41d413291dcd4eb592ecc140e8496.info
+       data=6 deps=9
+  save type=Asset guid=e5c1538996593a74b8540059bb0c5a33 version=-6 hash=e6e08565272d52600fcb8f25ee38b460 hit=- info=exists,6079B artifacts=1files/6079B sample=e5c1538996593a74b8540059bb0c5a33.info
+       data=6 deps=9
+  save type=Asset guid=0d70bf7a4a50f0e459a53aef98ebd4c6 version=-6 hash=909ddf4eb80f9850f2ccc0158abdb8a1 hit=- info=exists,3717B artifacts=1files/3717B sample=0d70bf7a4a50f0e459a53aef98ebd4c6.info
+       data=6 deps=3
+[Load] build=after-material-change caller=WriteSerializedFiles.Run entries=3 hits=2 misses=1 ms=8
+  load type=Data guid=070aa2b259104d7f34d98e674e4ab7d6 version=4 hash=09eab54375b29030d54742a7ad8a8423 hit=True info=exists,3087B artifacts=2files/12118B sample=070aa2b259104d7f34d98e674e4ab7d6.info
+  load type=Data guid=f8d0a88b954cefbbb9157d175cd3e5d1 version=4 hash=43d08eb714d7a808426c483181179b71 hit=True info=exists,3087B artifacts=2files/11463B sample=CAB-c2692dc06dec32d93f43b7c2e1768b1a
+  load type=Data guid=366d5936fa6d12800305d394e8b442c1 version=4 hash=876d801bcb50482acb26cdffb8bea251 hit=False info=missing artifacts=0files/0B sample=
+[Save] build=after-material-change caller=WriteSerializedFiles.Run count=1 ms=4
+  save type=Data guid=366d5936fa6d12800305d394e8b442c1 version=4 hash=876d801bcb50482acb26cdffb8bea251 hit=- info=exists,2580B artifacts=2files/149408B sample=366d5936fa6d12800305d394e8b442c1.info
+       data=2 deps=0
+[Load] build=after-material-change caller=ArchiveAndCompressBundles.Run entries=3 hits=2 misses=1 ms=2
+  load type=Data guid=4f5773e9b494b710d8f7d331a483a0e2 version=2 hash=d7b93e7e2d2e76d56e50f6c28de32cc9 hit=True info=exists,1062B artifacts=2files/4385B sample=4f5773e9b494b710d8f7d331a483a0e2.info
+  load type=Data guid=5feb5e7233e7e003cb624f2e9ecb35ef version=2 hash=d8fbde0cb913031dcc8f05eb6e87ed1d hit=True info=exists,1062B artifacts=2files/4228B sample=5feb5e7233e7e003cb624f2e9ecb35ef.info
+  load type=Data guid=49338e741e8d01a788c1919f1770ea0d version=2 hash=8bab42875e6eb2fe59f3f78862dae20e hit=False info=missing artifacts=0files/0B sample=
+[Save] build=after-material-change caller=ArchiveAndCompressBundles.Run count=1 ms=2
+  save type=Data guid=49338e741e8d01a788c1919f1770ea0d version=2 hash=8bab42875e6eb2fe59f3f78862dae20e hit=- info=exists,1051B artifacts=2files/47455B sample=49338e741e8d01a788c1919f1770ea0d.info
+       data=1 deps=0
+
+=== build after-material-change ===
+code=Success totalMs=89

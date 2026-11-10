@@ -1,0 +1,13 @@
+{
+    "builtAt": "2026-11-08 17:22:41",
+    "platform": "Android",
+    "sameAB": true,
+    "sameCD": true,
+    "sameBD": true,
+    "sameAE": false,
+    "bundleHashes": [
+        "props_a|61222da9f2feecb6d312bd46dc4929c9",
+        "props_b|fa61d49e4ee0f13eff0bb32488100470",
+        "shared|1287c555c0b11aa23a8ced55227c2e57"
+    ]
+}
