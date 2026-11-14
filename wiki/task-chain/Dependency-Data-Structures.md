@@ -667,19 +667,133 @@ GenerateBundleCommands
 ArchiveAndCompressBundles
 ```
 
-### 9.6 为什么要抽出来
+### 9.6 抽取前后：对象到底被“拷贝”到了哪
+
+#### 为什么抽取前会重复
+
+`GenerateBundlePacking.PackAssetBundle()` 的核心逻辑：
+
+```csharp
+foreach (var asset in includedAssets)
+{
+    AssetLoadInfo assetInfo = m_DependencyData.AssetInfo[asset];
+    allObjects.UnionWith(assetInfo.includedObjects);          // 自己的对象
+
+    var references = new List<ObjectIdentifier>(assetInfo.referencedObjects);
+    references = FilterReferencesForAsset(..., references, ...); // 过滤引用
+    allObjects.UnionWith(references);                          // 引用对象也进本 file
+    m_WriteData.AssetToFiles[asset] = new List<string> { internalName };
+}
+m_WriteData.FileToObjects.Add(internalName, allObjects.ToList());
+```
+
+`FilterReferencesForAsset` 会把“属于另一个**显式构建资产**的引用”转换成**文件级依赖**（不复制对象），例如 Material：
+
+```csharp
+if (dependencyData.AssetInfo.TryGetValue(reference.guid, out AssetLoadInfo referenceInfo))
+{
+    referencedAssets.Add(referenceInfo);   // 变成对另一个 file 的依赖
+    continue;
+}
+referencesPruned.Add(reference);           // 其余引用对象保留，会被打包进本 file
+```
+
+`MonoScript`、`builtin_extra` 的内置 Shader 通常**不是显式构建资产**，所以会留在 `referencesPruned` 里，被写进当前 bundle 的 file。
+
+如果多个 bundle 引用同一个 MonoScript/内置 Shader，就会变成：
+
+```text
+props_a file: [CubeA 组件对象..., MonoScript M]
+props_b file: [CubeC 组件对象..., MonoScript M]
+
+CubeA.AssetToFiles = [props_a/file]
+CubeC.AssetToFiles = [props_b/file]
+```
+
+同一个对象数据被序列化进了多个 SerializedFile。
+
+#### `UpdateBundleObjectLayout` 的四步
+
+1. **建反查表**：
+
+```text
+ObjectToAssetReferences[M] = [CubeA, CubeC]   // 谁引用了 M
+ObjectToFiles[M]           = [props_a/file, props_b/file]  // M 现在在哪些 file
+```
+
+2. **给引用它的 asset 追加新 file**：
+
+```csharp
+UpdateAssetToFilesMap(internalName, ObjectToAssetReferences[objectID], m_WriteData.AssetToFiles);
+```
+
+```text
+CubeA.AssetToFiles: [props_a/file] → [props_a/file, MonoScripts/fileX]
+CubeC.AssetToFiles: [props_b/file] → [props_b/file, MonoScripts/fileX]
+```
+
+`[0]` 仍然是主文件；新 file 是**加载依赖**，不是新的 asset 依赖。
+
+3. **从旧 file 的 FileToObjects 里移除**：
+
+```csharp
+RemoveObjectIDFromFiles(objectID, ObjectToFiles[objectID], m_WriteData.FileToObjects);
+```
+
+```text
+props_a/file: [CubeA 组件..., MonoScript M] → [CubeA 组件...]
+props_b/file: [CubeC 组件..., MonoScript M] → [CubeC 组件...]
+```
+
+4. **注册新 file / 新 bundle，并把对象放进新 file**：
+
+```csharp
+UpdateFileToBundleMap(bundleName, internalName, m_WriteData.FileToBundle, m_Content.BundleLayout);
+UpdateFileToObjectMap(internalName, objectIDs, m_WriteData.FileToObjects);
+```
+
+```text
+FileToBundle[MonoScripts/fileX]   = UnityMonoScripts
+BundleLayout[UnityMonoScripts]    = []        // 只有对象，没有完整 asset
+FileToObjects[MonoScripts/fileX]  = [MonoScript M]
+```
+
+#### 抽取后的结果
+
+```text
+props_a/file: [CubeA 组件对象...]           ← M 被移除
+props_b/file: [CubeC 组件对象...]           ← M 被移除
+MonoScripts/fileX: [MonoScript M]          ← 只存一份
+
+CubeA.AssetToFiles = [props_a/file, MonoScripts/fileX]
+CubeC.AssetToFiles = [props_b/file, MonoScripts/fileX]
+```
+
+之后：
+
+- `GenerateBundleCommands` 会为 `MonoScripts/fileX` 生成 `WriteOperation`；
+- `ArchiveAndCompressBundles` 会把它打成 `UnityMonoScripts.bundle`；
+- `GenerateBundleMaps` 在 Update 之后执行，所以最终 `BuildReferenceMap` / `BuildUsageTagSet` 基于移动后的布局生成；
+- `BundleLayout[UnityMonoScripts]` 是空 asset 列表 —— SBP 支持“只放对象、不放完整 asset”的 raw object bundle。
+
+#### 关键理解
+
+> “拷贝进去”不是真的复制文件，而是 **Packing 把 referenced 对象当成普通对象序列化进当前 bundle 的 SerializedFile**。  
+> 抽取的本质是：**从旧 file 的 `FileToObjects` 移除 → 放进新 file → 把引用方 `AssetToFiles` 追加新 file**。
+
+### 9.7 为什么要抽出来
 
 - 同一个 `MonoScript` 可能被很多 prefab 引用；
 - 不抽的话，它作为 referenced object 可能被复制进多个 bundle；
 - 抽出来后，所有 MonoBehaviour 数据只保留对共享 `MonoScripts.bundle` 的依赖，避免重复元数据。
 
-### 9.7 和 link.xml / 热更的关系
+### 9.8 和 link.xml / 热更的关系
 
 - `GenerateLinkXml` 负责生成 `link.xml`，防止 IL2CPP/代码裁剪把“被 AB 引用的脚本类”裁掉；
 - `MonoScript` 只是元数据：**改 `.cs` 代码必须重新出 Player，只更新 AB 不能热更 C# 逻辑**；
 - 所以“MonoScript bundle”不等于“脚本 bundle”，它只是元数据去重。
 
-### 9.8 内置组件（BoxCollider 等）为什么没有 MonoScript？
+### 9.9 内置组件（BoxCollider 等）为什么没有 MonoScript？
 
 `BoxCollider`、`Transform`、`MeshFilter`、`MeshRenderer` 这些**不是 C# 脚本，而是引擎的 native C++ 类型**；它们不以 `.cs` 资产形式存在，所以没有 `MonoScript`。
 
@@ -719,7 +833,7 @@ MonoBehaviour:
 
 > 一句话：**内置组件是引擎类型；MonoBehaviour 是托管脚本组件；只有后者才需要 MonoScript 元数据。**
 
-### 9.9 结论
+### 9.10 结论
 
 > **`MonoScript` = 脚本的序列化身份/元数据，不是代码；`CreateMonoScriptBundle` = 把这些元数据对象抽到共享 bundle 做去重；真正的 C# 代码仍在 Player 程序集里。**
 
