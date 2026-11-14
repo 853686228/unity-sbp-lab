@@ -546,6 +546,145 @@ if ((options & BuildAssetBundleOptions.DisableWriteTypeTree) != 0)
 
 ---
 
+## 9. MonoScript 是什么？为什么会被单独抽成 bundle？
+
+### 9.1 一句话
+
+**`MonoScript` 是脚本资产的“序列化元数据对象”，不是 C# 代码。** 它记录类名、命名空间、程序集等信息；真正的代码在 Player 程序集里。
+
+### 9.2 三样东西不要混
+
+| 东西 | 在哪里 | 能否进 AB |
+|---|---|---|
+| C# 源码 / 编译后的 DLL / IL2CPP 代码 | Player 程序集（`Assembly-CSharp.dll`、`libil2cpp.so` 等） | ❌ 不能靠 AB 更新 |
+| `MonoScript` 对象 | Unity 资产数据库里的脚本资产对象 | ✅ 可以序列化进 AB |
+| `MonoBehaviour` 实例数据 | prefab / scene 里的组件对象 | ✅ 可以进 AB |
+
+所以“AB 不能打包 C# 脚本”是对的：**AB 里没有可执行代码**；但 AB 里可以有 `MonoScript` 这个“脚本身份/元数据”。
+
+### 9.3 什么脚本能挂到 GameObject 上
+
+| 类型 | 能否挂 GameObject | 用途 |
+|---|---|---|
+| `MonoBehaviour` 派生类 | ✅ | 组件，挂在 GameObject 上 |
+| `ScriptableObject` 派生类 | ❌ | 资源（`.asset`），通过字段引用 |
+| `[Serializable]` 普通 class/struct | ❌ | 作为 MonoBehaviour 的字段被序列化 |
+| 纯 C# class | ❌ | 普通逻辑对象 |
+| native 组件（Transform、MeshRenderer…） | ✅（不是 C# 写的） | 引擎自带 Component |
+
+继承链：
+
+```text
+UnityEngine.Object
+ └─ Component
+     └─ Behaviour
+         └─ MonoBehaviour   ← 用户 C# 脚本挂 GameObject 的基类
+```
+
+接口（如 `ISerializationCallbackReceiver`）只是附加能力，不能替代 `MonoBehaviour` 基类。
+
+### 9.4 依赖图里的 MonoScript
+
+假设 prefab 上挂了自定义脚本：
+
+```csharp
+public class EnemyBehaviour : MonoBehaviour
+{
+    public Material hitMat;
+}
+```
+
+依赖数据大致是：
+
+```text
+Enemy.prefab
+  includedObjects:
+    GameObject
+    EnemyBehaviour (MonoBehaviour)
+  referencedObjects:
+    Material            ← hitMat 字段
+    MonoScript          ← EnemyBehaviour 对应的脚本元数据对象
+```
+
+- `MonoBehaviour` 对象序列化时有一个 `m_Script` 引用，指向 `MonoScript`；
+- 运行时 Unity 靠这个引用知道“这个组件是哪个类”；
+- 真正的类实现仍然来自 Player 程序集。
+
+> 本 lab 的 `CubeA.prefab` 只用了内置组件（GameObject/Transform/MeshFilter/MeshRenderer/BoxCollider），没有自定义 MonoBehaviour，所以 Ex19 的依赖里看不到 MonoScript。挂一个自定义脚本后，`referencedObjects` 里就会多出它。
+
+### 9.5 和 MonoScript 抽取相关的 3 个 SBP 任务
+
+| Task | 作用 | 条件 |
+|---|---|---|
+| `CreateBuiltInShadersBundle`（SBP 2.x 叫 `CreateBuiltInBundle`） | 把 `resources/unity_builtin_extra`（GUID `0000...f000...`）的内置 shader 对象登记到 `IBundleExplictObjectLayout` | 配置了 builtin shader bundle 名 |
+| `CreateMonoScriptBundle` | 把所有 `referencedObjects` 中主类型为 `MonoScript` 的对象登记到 layout（排除 `library/unity default resources`，GUID `0000...e000...`） | 配置了 MonoScript bundle 名 |
+| `UpdateBundleObjectLayout` | 把 layout 里的对象从原 bundle 的 `FileToObjects` 挪到新 bundle/file；为空时 `SuccessNotRun` | 总是加（YooAsset）/ extraction preset 时加（SBP） |
+
+`CreateMonoScriptBundle` 的核心：
+
+```csharp
+Type monoScript = typeof(MonoScript);
+for (int i = 0; i < usedTypes.Length; i++)
+{
+    if (usedTypes[i] != monoScript || usedSet[i].guid == k_DefaultGuid)
+        continue;
+    m_Layout.ExplicitObjectLocation.Add(usedSet[i], MonoScriptBundleName);
+}
+```
+
+`UpdateBundleObjectLayout` 的核心：
+
+```csharp
+foreach (var group in m_Layout.ExplicitObjectLocation.GroupBy(s => s.Value))
+{
+    string bundleName = group.Key;
+    string internalName = string.Format(CommonStrings.AssetBundleNameFormat,
+        m_PackingMethod.GenerateInternalFileName(bundleName));
+
+    foreach (var objectID in group.Select(s => s.Key))
+    {
+        UpdateAssetToFilesMap(internalName, ObjectToAssetReferences[objectID], m_WriteData.AssetToFiles);
+        RemoveObjectIDFromFiles(objectID, ObjectToFiles[objectID], m_WriteData.FileToObjects);
+    }
+
+    UpdateFileToBundleMap(bundleName, internalName, m_WriteData.FileToBundle, m_Content.BundleLayout);
+    UpdateFileToObjectMap(internalName, group.Select(s => s.Key), m_WriteData.FileToObjects);
+}
+```
+
+执行顺序：
+
+```text
+CalculateAssetDependencyData
+StripUnusedSpriteSources
+CreateBuiltInShadersBundle   ← 只登记 layout
+CreateMonoScriptBundle       ← 只登记 layout
+PostDependencyCallback
+GenerateBundlePacking
+UpdateBundleObjectLayout     ← 把对象从原 bundle 拆到新 bundle
+GenerateBundleCommands
+...
+ArchiveAndCompressBundles
+```
+
+### 9.6 为什么要抽出来
+
+- 同一个 `MonoScript` 可能被很多 prefab 引用；
+- 不抽的话，它作为 referenced object 可能被复制进多个 bundle；
+- 抽出来后，所有 MonoBehaviour 数据只保留对共享 `MonoScripts.bundle` 的依赖，避免重复元数据。
+
+### 9.7 和 link.xml / 热更的关系
+
+- `GenerateLinkXml` 负责生成 `link.xml`，防止 IL2CPP/代码裁剪把“被 AB 引用的脚本类”裁掉；
+- `MonoScript` 只是元数据：**改 `.cs` 代码必须重新出 Player，只更新 AB 不能热更 C# 逻辑**；
+- 所以“MonoScript bundle”不等于“脚本 bundle”，它只是元数据去重。
+
+### 9.8 结论
+
+> **`MonoScript` = 脚本的序列化身份/元数据，不是代码；`CreateMonoScriptBundle` = 把这些元数据对象抽到共享 bundle 做去重；真正的 C# 代码仍在 Player 程序集里。**
+
+---
+
 ## 返回
 
 回到 [任务链 Wiki 主文档](README.md)（§4 数据结构手册 / §4.2 依赖数据）。
