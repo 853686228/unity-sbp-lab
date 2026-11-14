@@ -88,6 +88,7 @@
 | [SBP-Determinism.md](lab-project/Docs/SBP-Determinism.md) | 确定性：ID 生成、排序、ContentHash/RawFileHash、BundleDetails.Hash、回调版本、构建指纹 |
 | [YooAsset-BuildCache.md](lab-project/Docs/YooAsset-BuildCache.md) | **YooAsset 3.0.7 上层构建加速**：SBP BuildCache 复用 + `AssetDependencyDatabase` 数据结构、伪代码、成本模型与“是否有必要” |
 | [YooAsset-vs-SBP.md](lab-project/Docs/YooAsset-vs-SBP.md) | YooAsset 构建管线 vs SBP：外层任务、`SBPBuildTasks`、参数/内容/结果映射、Clear Build Cache |
+| [YooAsset-Encryption.md](lab-project/Docs/YooAsset-Encryption.md) | **YooAsset 3.0.7 运行时加密**：Offset/Memory/Stream 三种模式，Stream 的接口、生命周期、Unity 约束、AES-CTR 实现与 LZ4/内存对照 |
 | [SBP-Cache-Invalidation.md](lab-project/Docs/SBP-Cache-Invalidation.md) | 失效图谱：GlobalHash / Guid / Version / Hash / 依赖校验五层，逐 case 说明什么改动会让缓存失效 |
 
 ### 实验总览
