@@ -2,6 +2,8 @@
 
 > 详细的上层缓存数据结构与代码/伪代码见独立文档：**[YooAsset-BuildCache.md](YooAsset-BuildCache.md)**（SBP BuildCache + AssetDependencyDatabase 两层缓存）。
 >
+> 运行时加密/解密（Offset / Memory / Stream）见 **[YooAsset-Encryption.md](YooAsset-Encryption.md)**。
+>
 > 本文基于本机安装的 **YooAsset 3.0.7**（embedded package）源码阅读，对照 **SBP 1.23.4**。
 >
 > 安装位置：`_e2e/UnityGradleDemo/Packages/com.tuyoogame.yooasset`
