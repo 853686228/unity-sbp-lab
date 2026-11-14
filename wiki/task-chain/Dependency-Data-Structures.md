@@ -679,7 +679,47 @@ ArchiveAndCompressBundles
 - `MonoScript` 只是元数据：**改 `.cs` 代码必须重新出 Player，只更新 AB 不能热更 C# 逻辑**；
 - 所以“MonoScript bundle”不等于“脚本 bundle”，它只是元数据去重。
 
-### 9.8 结论
+### 9.8 内置组件（BoxCollider 等）为什么没有 MonoScript？
+
+`BoxCollider`、`Transform`、`MeshFilter`、`MeshRenderer` 这些**不是 C# 脚本，而是引擎的 native C++ 类型**；它们不以 `.cs` 资产形式存在，所以没有 `MonoScript`。
+
+| | 内置组件（BoxCollider 等） | 自定义 MonoBehaviour |
+|---|---|---|
+| 实现 | 引擎 native C++（PhysicsModule、CoreModule…） | C# 程序集（Assembly-CSharp.dll 等） |
+| 资产形式 | 引擎内置类型，没有 `.cs` 资产 | 有 `.cs` 脚本资产 + 对应 `MonoScript` |
+| 序列化标识 | **固定 class ID**（Transform=4、MeshFilter=33、MeshRenderer=23、BoxCollider=65…） | class ID **114** + `m_Script` 指向 MonoScript |
+| 类型布局 | 引擎自带类型信息 / TypeTree | 需要 TypeDB / 生成的类型布局 |
+| 是否引用 MonoScript | ❌ 没有 | ✅ 被引用时进 `referencedObjects` |
+| 是否进 MonoScript bundle | ❌ | ✅ 如果启用 `CreateMonoScriptBundle` |
+
+序列化层面的差别：
+
+```yaml
+# 内置组件：直接用 native class ID + 自身字段
+BoxCollider:
+  m_GameObject: {fileID: ...}
+  m_Size: {x: 1, y: 1, z: 1}
+
+# 自定义脚本：MonoBehaviour + m_Script 指针
+MonoBehaviour:
+  m_Script: {fileID: 11500000, guid: <EnemyBehaviour.cs 的 GUID>, type: 3}
+  hitMat:   {fileID: 2100000, guid: <Mat.mat 的 GUID>, type: 2}
+```
+
+所以：
+
+- **组件实例本身**（不管内置还是自定义 MonoBehaviour）都序列化在 prefab/scene 里 → `includedObjects`；
+- **自定义 MonoBehaviour** 多一个 `m_Script` 指针 → `referencedObjects` 里多一个 `MonoScript`；
+- **内置组件**没有 `m_Script`，运行时靠 class ID + native 类型信息识别，不需要 MonoScript。
+
+另外两个容易混的点：
+
+- `CreateMonoScriptBundle` 只处理 `MonoScript` 对象；内置组件永远不会出现在里面；
+- `CreateBuiltInShadersBundle` 抽取的是 `Resources/unity_builtin_extra` 里的**内置 Shader 对象**，不是“内置组件”。
+
+> 一句话：**内置组件是引擎类型；MonoBehaviour 是托管脚本组件；只有后者才需要 MonoScript 元数据。**
+
+### 9.9 结论
 
 > **`MonoScript` = 脚本的序列化身份/元数据，不是代码；`CreateMonoScriptBundle` = 把这些元数据对象抽到共享 bundle 做去重；真正的 C# 代码仍在 Player 程序集里。**
 
